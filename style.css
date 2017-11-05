@@ -1,82 +1,257 @@
+/*variable storage*/
+:root{
+  /*color*/
+  --black1: #070707;
+  --black2: #333;
+  --white1: #f5f5f5;
+  --white2: #fafafa;
+  --orange1: #ffa500;
+  --orange2: #ffc364;
+  /*hero-left-size*/
+  --hero-left-size: 30vw;
+}
+/*embeded fonts*/
+@font-face {
+  font-family: "supermarket";
+  src: url('fonts/supermarket.ttf');
+}
+/*universal style*/
+*{
+  font-family: 'supermarket';
+  font-size: 16pt;
+}
+html{
+  background: #fff;
+  overflow-x: hidden;
+}
+a{
+  color: var(--orange1);
+}
+a:hover{
+  color: var(--orange2);
+  text-decoration: none;
+}
+p{
+  font-size: 14pt;
+}
+h1{
+  font-size: 90pt;
+  line-height: 4rem;
+}
+h2{
+  font-size: 40pt;
+}
+h3{
+  font-size: 28pt;
+  line-height: 3rem;
+}
+h4{
+  font-size: 24pt;
+}
+footer{
+  background: var(--black1);
+  color: var(--white1);
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 .fullscreen{
     min-width: 100vw;
     min-height: 100vh;
 }
-.light{
-    color: #fefefe;
+/*spectify id */
+/*index*/
+#hero{
+  color: var(--white1);
+  background: var(--black1);
 }
-a.light:hover{
-    color: #aaa;
-    text-decoration: none;
+#hero > .background{
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  position: absolute;
+  filter: brightness(0.5);
 }
-.dark{
-    color: #333;
+#hero > .hero-left{
+  background: var(--black1);
+  /*background: rgba(0, 0, 0, 0.8);*/
+  position: absolute;
+  width: var(--hero-left-size);
+  height: 100vh;
 }
-a.dark:hover{
-    color: #aaa;
-    text-decoration: none;
+#hero > .hero{
+  /*display: flex;
+  align-items: center;*/
 }
-#navbar{
-    position: fixed;
-    z-index: 100;
-    width: 100vw;
-    padding-top: 0.8em;
-    padding-left: 14em;
-    padding-right: 14em;
+#hero > .hero > .container{
+  padding: 2em;
+  /*padding-top: 100px;*/
+  margin-top: 200px;
+  font-weight: 200;
 }
-.nav-item{
-    display: inline;
-    padding-left: 3em;
-    font-size: 15pt;
+#hero img{
+  display: inline;
+  margin-right: .5em;
 }
-#home{
-    display: flex;
+#hero h3{
+  display: inline;
 }
-.home-image{
-    background-image: url('images/background.png');
-    background-size: cover;
-    background-position: top;
+#hero ul{
+  list-style: none;
+  padding: .5em;
 }
-.home-filter{
-    position: absolute;
-    top: 0;
-    width: 38vw;
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+#hero a{
+  color: var(--white2);
+  font-size: 14pt;
 }
-.center-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#hero li .selected{
+  color: var(--orange1);
 }
-.center-text .left{
-    margin-top: 15%;
-    margin-right: 20%;
+#hero a:hover{
+  color: var(--orange2);
 }
-.blackbox{
-    background: black;
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-    display: inline-block;
+#hero > .hero-right{
+  width: calc(100vw - var(--hero-left-size));
+  height: 100vh;
+  position: absolute;
+  left: var(--hero-left-size);
 }
-.blackbox .show{
-    background: black;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    margin: 10px;
-    transition: all .4s;
-    color: black;
-    display: flex;
+
+#details{
+  margin-top: 20px;
+  background: var(--white1);
+  margin-bottom: 20px;
 }
-.blackbox .show:hover{
-    background: orange;
-    color: #fefefe;
+#details p {
+  text-align: center;
+  max-width: 90vw;
+  width: 600px;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-.blackbox .show span{
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 15pt;
-    padding-bottom: .5em;
+#user-reviews, #rewards{
+  background: var(--white1);
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 20px;
+}
+#user-reviews .box{
+  /*box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);*/
+  min-height: 150px;
+  text-align: left;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: .5em;
+}
+#user-reviews .box img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+#user-reviews .box div{
+  margin-left: calc(80px + 1em);
+  margin-top: -80px;
+}
+#user-reviews .box span{
+  font-size: 18pt;
+  line-height: 18pt;
+  display: block;
+}
+#user-reviews .box p{
+  color: var(--black1);
+}
+#user-reviews .box .name{
+  color: var(--orange1);
+  font-weight: bold;
+}
+#user-reviews .box .user{
+  color: var(--black2);
+  font-size: 14pt;
+}
+
+/*contacts*/
+.contacts{
+  background: var(--white1);
+  color: var(--black1);
+  padding: 1.4em;
+  padding-top: 120px;
+}
+.contacts h3{
+  color: var(--orange1);
+  font-weight: bold;
+}
+.contacts .box{
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  /*padding: .5em;*/
+  background: var(--black1);
+  height: 200px;
+  background-image: url('images/profile.jpg');
+  background-size: cover;
+  position: relative;
+}
+.contacts .box > .content{
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  color: rgba(0, 0, 0, 0.0);
+  padding-bottom: .5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all .4s ease;
+  filter: opacity(0.8) blur(3px);
+  cursor: pointer;
+}
+.contacts .box > .content:hover{
+  margin-left: .5em;
+  margin-right: .5em;
+  margin-top: .5em;
+  height: calc(100% - 1em);
+  width: calc(100% - 1em);
+  background: var(--orange1);
+  color: var(--white2);
+  filter: opacity(0.8) blur(0px);
+}
+.contacts .box > .content > span{
+  text-align: center;
+}
+
+/*about us*/
+.about > .background-about{
+  background-image: url('images/studio.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about h2{
+  color: var(--orange1);
+}
+.about .box{
+  box-shadow: 0 0 5px var(--black2);
+  border-radius: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+  min-width: 500px;
+  padding: 1rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url('images/studio-blur.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about .hero-right{
+  color: var(--black2);
+  text-align: center;
 }
