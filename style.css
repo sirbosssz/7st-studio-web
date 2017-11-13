@@ -271,3 +271,11 @@ footer{
   color: var(--black2);
   text-align: center;
 }
+
+.about > .background-contact{
+  background-image: url('images/studio-blur.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
