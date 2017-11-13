@@ -85,6 +85,9 @@ footer{
   display: flex;
   align-items: center;
 }
+#hero .hero-left .container{
+  padding-right: 1em;
+}
 #hero .hero-right .container{
   margin-left: auto;
   margin-right: auto;
@@ -111,12 +114,9 @@ footer{
   list-style: none;
   padding: .5em;
 }
-#hero li{
-    /*padding-bottom: .25em;*/
-}
 #hero a{
   color: var(--white2);
-  line-height: 1.5rem;
+  line-height: 1.8em;
   font-size: 1em;
 }
 #hero li .selected{
@@ -127,7 +127,7 @@ footer{
 }
 #hero > .hero-right{
   width: calc(100vw - var(--hero-left-size));
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   left: var(--hero-left-size);
 }
@@ -136,6 +136,7 @@ footer{
   margin-top: 20px;
   background: var(--white1);
   margin-bottom: 20px;
+  min-height: 400px;
 }
 #details p {
   text-align: center;
@@ -143,22 +144,34 @@ footer{
   width: 600px;
   margin: auto;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
-#user-reviews, #rewards{
+#details img{
+  padding-top: 3em;
+}
+#details .container .col{
+  padding-left: .1pt;
+  padding-right: .1pt;
+}
+#user-reviews{
   background: var(--white1);
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 20px;
 }
+#user-reviews .col-md-4{
+  padding-left: .3em;
+  padding-right: .3em;
+}
 #user-reviews .box{
-  /*box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);*/
+  /*box-shadow: 0 0 6px rgba(255, 165, 0, 0.4);*/
+  background: var(--white2);
   min-height: 150px;
   text-align: left;
-  padding: 1em;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: .5em;
+  padding: .7em;
+  border: 3px solid var(--orange2);
+  border-radius: .2em;
 }
 #user-reviews .box img{
   width: 80px;
@@ -174,7 +187,7 @@ footer{
 #user-reviews .box span{
   font-size: 18pt;
   line-height: 18pt;
-  display: block;
+  /*display: block;*/
 }
 #user-reviews .box p{
   color: var(--black1);
@@ -185,7 +198,7 @@ footer{
 }
 #user-reviews .box .user{
   color: var(--black2);
-  font-size: 14pt;
+  font-size: 16pt;
 }
 
 /*contacts*/
@@ -272,10 +285,44 @@ footer{
   text-align: center;
 }
 
+/*Maps*/
 .about > .background-contact{
   background-image: url('images/studio-blur.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.maps {
+  margin: 0;
+  padding: 0;
+}
+.maps iframe{
+  width: calc(99vw - var(--hero-left-size));
+  height: 100vh;
+}
+
+/*Gallery*/
+.gallery{
+  background: var(--white2);
+}
+.background-gallery{
+  background: var(--white2);
+  min-height: 100vh;
+}
+.album{
+  border: 3px solid var(--orange1);
+  padding: 1em;
+  margin: 1em;
+  background: var(--white1);
+  border-radius: .3em;
+}
+.album h3{
+  color: var(--orange1);
+}
+.album h4{
+  color: var(--black2);
+}
+#album-thumbnail .col{
+  padding: .1em;
 }
