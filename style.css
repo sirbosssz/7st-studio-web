@@ -8,7 +8,7 @@
   --orange1: #ffa500;
   --orange2: #ffc364;
   /*hero-left-size*/
-  --hero-left-size: 30vw;
+  --hero-left-size: 25vw;
 }
 /*embeded fonts*/
 @font-face {
@@ -18,7 +18,7 @@
 /*universal style*/
 *{
   font-family: 'supermarket';
-  font-size: 16pt;
+  font-size: 18pt;
 }
 html{
   background: #fff;
@@ -32,17 +32,17 @@ a:hover{
   text-decoration: none;
 }
 p{
-  font-size: 14pt;
+  font-size: 16pt;
 }
 h1{
-  font-size: 90pt;
+  font-size: 100pt;
   line-height: 4rem;
 }
 h2{
-  font-size: 40pt;
+  font-size: 60pt;
 }
 h3{
-  font-size: 28pt;
+  font-size: 34pt;
   line-height: 3rem;
 }
 h4{
@@ -72,7 +72,7 @@ footer{
   background-repeat: no-repeat;
   background-position: left;
   position: absolute;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
 }
 #hero > .hero-left{
   background: var(--black1);
@@ -82,29 +82,42 @@ footer{
   height: 100vh;
 }
 #hero > .hero{
-  /*display: flex;
-  align-items: center;*/
+  display: flex;
+  align-items: center;
+}
+#hero .hero-right .container{
+  margin-left: auto;
+  margin-right: auto;
 }
 #hero > .hero > .container{
-  padding: 2em;
+  padding: .5em;
   /*padding-top: 100px;*/
-  margin-top: 200px;
+  /*margin-top: 200px;*/
   font-weight: 200;
 }
 #hero img{
   display: inline;
   margin-right: .5em;
 }
+#hero h1{
+  font-size: 12vw;
+  margin-bottom: 3vw;
+}
 #hero h3{
+  /*font-size: 5vw;*/
   display: inline;
 }
 #hero ul{
   list-style: none;
   padding: .5em;
 }
+#hero li{
+    /*padding-bottom: .25em;*/
+}
 #hero a{
   color: var(--white2);
-  font-size: 14pt;
+  line-height: 1.5rem;
+  font-size: 1em;
 }
 #hero li .selected{
   color: var(--orange1);
@@ -180,7 +193,10 @@ footer{
   background: var(--white1);
   color: var(--black1);
   padding: 1.4em;
-  padding-top: 120px;
+  display: flex;
+}
+.contacts .container{
+  align-self: center;
 }
 .contacts h3{
   color: var(--orange1);
@@ -197,7 +213,7 @@ footer{
   position: relative;
 }
 .contacts .box > .content{
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.0);
   position: absolute;
   color: rgba(0, 0, 0, 0.0);
   padding-bottom: .5em;
