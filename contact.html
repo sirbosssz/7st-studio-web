@@ -2,27 +2,21 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>7st. Studio</title>
     <link rel="icon" href="icon/icon1.png">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
     <!-- font awesome -->
     <script src="https://use.fontawesome.com/9a89b9a705.js"></script>
     <!-- main style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-      :root{
-        --hero-left-size: 22vw;
-      }
-    </style>
     <!-- hero section -->
-    <section id="hero" class="fullscreen about">
-      <div class="background-contact hero-right"></div>
-      <div class="hero hero-left">
+    <section id="contact" class="hero fullscreen about">
+      <div class="hero-inner hero-left">
         <div class="container" style="text-align: right">
           <span>
             <img src="icon/icon.png" alt="studio icon" width="70px">
@@ -43,8 +37,9 @@
           </ul>
         </div>
       </div>
-      <div class="hero hero-right">
-        <div class="containe maps">
+      <div class="hero-inner hero-right" style="background:var(--white2)">
+        <div class="maps">
+          <h4 class="hide-lg">ที่อยู่ติดต่อ</h4>
           <iframe
             width="600"
             height="450"
@@ -58,7 +53,7 @@
     <footer>
       <div class="container">
         <div class="row justify-content-between align-items-end">
-          <div class="col">
+          <div class="col-12 col-md">
             <span>2017, 7st Studio</span>
             <p>1/15 Ladkranang Bangkok Thailand 10520<br>081-112-2334</p>
           </div>
@@ -68,9 +63,6 @@
         </div>
       </div>
     </footer>
-    <!-- bootstarp js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </body>
 </html>
