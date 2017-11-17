@@ -72,6 +72,20 @@ footer .col{
 .hide-lg{
   display: none;
 }
+.alert{
+  background: var(--black2);
+  display: none;
+  transition: all .6s;
+}
+.alert-ie, .alert-small-devices{
+  margin: 1em;
+  background: var(--white2);
+  padding: 1em;
+  display: none;
+}
+.inner{
+  display: inherit;
+}
 /*spectify id */
 /*index*/
 .hero{
@@ -219,6 +233,7 @@ footer .col{
 #user-reviews .box span{
   font-size: 18pt;
   line-height: 18pt;
+  display: block;
 }
 #user-reviews .box p{
   color: var(--black1);
@@ -289,8 +304,9 @@ footer .col{
   color: var(--white2);
   border: 2px solid var(--white2);
   font-size: 14pt;
-  padding-left: .4em;
-  padding-right: .4em;
+  padding: .2em;
+  padding-left: .6em;
+  padding-right: .6em;
   cursor: pointer;
   transition: all .4s ease;
 }
@@ -344,33 +360,6 @@ footer .col{
 .maps iframe{
   width: calc(99vw - var(--not-hero-left-size));
   height: 100vh;
-}
-
-/*Gallery*/
-.gallery{
-  background: var(--white2);
-}
-.background-gallery{
-  background: var(--white2);
-  min-height: 100vh;
-}
-.album{
-  border: 3px solid var(--orange1);
-  padding: 1em;
-  margin: 1em;
-  background: var(--white1);
-}
-.album h3{
-  color: var(--orange1);
-}
-.album h4{
-  color: var(--black2);
-}
-#album-thumbnail .col{
-  padding: .1em;
-}
-  color: var(--black2);
-  text-align: center;
 }
 
 /*Maps*/
@@ -444,9 +433,6 @@ footer .col{
     --hero-left-size: 270px;
     --not-hero-left-size: 270px;
   }
-  .hero{
-    margin-top: 50px;
-  }
   .hero-left{
     margin-left: -270px;
     position: absolute;
@@ -461,6 +447,9 @@ footer .col{
   }
   #details img{
     height: 200px;
+  }
+  #contact, #team{
+    margin-top: 60px;
   }
   .maps iframe{
     margin-left: 5vw;
@@ -483,7 +472,7 @@ footer .col{
 @media (max-width: 767px) {
   #home h3{
     font-size: 24pt;
-    line-height: .7em;
+    line-height: 1em;
   }
 }
 
@@ -513,5 +502,20 @@ footer .col{
   }
   #team .col{
     padding: 0;
+  }
+}
+
+/* in case small than 320px  */
+@media (max-width: 319px){
+  .inner{
+    display: none;
+  }
+  .alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .alert-small-devices{
+    display: block;
   }
 }
