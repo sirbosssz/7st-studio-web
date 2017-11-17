@@ -8,7 +8,8 @@
   --orange1: #ffa500;
   --orange2: #ffc364;
   /*hero-left-size*/
-  --hero-left-size: 25vw;
+  --hero-left-size: 370px;
+  --not-hero-left-size: 320px;
 }
 /*embeded fonts*/
 @font-face {
@@ -19,6 +20,10 @@
 *{
   font-family: 'supermarket';
   font-size: 18pt;
+  font-weight: normal;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 html{
   background: #fff;
@@ -26,13 +31,14 @@ html{
 }
 a{
   color: var(--orange1);
+  text-decoration: none;
 }
 a:hover{
   color: var(--orange2);
-  text-decoration: none;
 }
 p{
   font-size: 16pt;
+  line-height: 1.4em;
 }
 h1{
   font-size: 100pt;
@@ -56,17 +62,23 @@ footer{
   padding-left: 1em;
   padding-right: 1em;
 }
+footer .col{
+  text-align: right;
+}
 .fullscreen{
     min-width: 100vw;
     min-height: 100vh;
 }
+.hide-lg{
+  display: none;
+}
 /*spectify id */
 /*index*/
-#hero{
+.hero{
   color: var(--white1);
   background: var(--black1);
 }
-#hero > .background{
+.hero > .background{
   background-image: url('images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,69 +86,87 @@ footer{
   position: absolute;
   filter: brightness(0.8);
 }
-#hero > .hero-left{
+.hero > .hero-left{
   background: var(--black1);
-  /*background: rgba(0, 0, 0, 0.8);*/
   position: absolute;
-  width: var(--hero-left-size);
+  width: var(--not-hero-left-size);
   height: 100vh;
+  transition: all .4s;
 }
-#hero > .hero{
+.hero > .hero-inner{
   display: flex;
   align-items: center;
 }
-#hero .hero-left .container{
-  padding-right: 1em;
+.hero .hero-left > .container{
+  padding-right: 1.5em;
 }
-#hero .hero-right .container{
+.hero .hero-right > .container{
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
-#hero > .hero > .container{
+.hero > .hero-left > .container > span{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero > .hero-inner > .container{
   padding: .5em;
-  /*padding-top: 100px;*/
-  /*margin-top: 200px;*/
   font-weight: 200;
 }
-#hero img{
+.hero img{
   display: inline;
   margin-right: .5em;
 }
-#hero h1{
+.hero h1{
   font-size: 12vw;
   margin-bottom: 3vw;
 }
-#hero h3{
-  /*font-size: 5vw;*/
+.hero h3{
   display: inline;
 }
-#hero ul{
+.hero ul{
+  margin-top: 0;
   list-style: none;
   padding: .5em;
 }
-#hero a{
+.hero a{
   color: var(--white2);
   line-height: 1.8em;
   font-size: 1em;
 }
-#hero li .selected{
+.hero li .selected{
   color: var(--orange1);
 }
-#hero a:hover{
+.hero a:hover{
   color: var(--orange2);
 }
-#hero > .hero-right{
-  width: calc(100vw - var(--hero-left-size));
+.hero > .hero-right{
+  width: calc(100vw - var(--not-hero-left-size));
   min-height: 100vh;
-  position: absolute;
-  left: var(--hero-left-size);
+  /* position: absolute; */
+  margin-left: var(--not-hero-left-size);
 }
-
+#home .hero-left{
+  width: var(--hero-left-size);
+  transition: all .4s;
+}
+#home .hero-right{
+  width: calc(100vw - var(--hero-left-size));
+  margin-left: var(--hero-left-size);
+}
+#home .hero-right .container{
+  min-width: 70vw;
+}
 #details{
   margin-top: 20px;
   background: var(--white1);
   margin-bottom: 20px;
   min-height: 400px;
+}
+#details img{
+  height: 400px;
+  object-fit: cover;
 }
 #details p {
   text-align: center;
@@ -144,10 +174,10 @@ footer{
   width: 600px;
   margin: auto;
   padding-top: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
-#details img{
-  padding-top: 3em;
+#details .row{
+  padding-bottom: 2em;
 }
 #details .container .col{
   padding-left: .1pt;
@@ -160,9 +190,10 @@ footer{
   padding-bottom: 1em;
   margin-bottom: 20px;
 }
-#user-reviews .col-md-4{
+#user-reviews .col-lg-4{
   padding-left: .3em;
   padding-right: .3em;
+  padding-top: .5em;
 }
 #user-reviews .box{
   /*box-shadow: 0 0 6px rgba(255, 165, 0, 0.4);*/
@@ -172,6 +203,7 @@ footer{
   padding: .7em;
   border: 3px solid var(--orange2);
   border-radius: .2em;
+  display: flex;
 }
 #user-reviews .box img{
   width: 80px;
@@ -181,16 +213,16 @@ footer{
   border-radius: 50%;
 }
 #user-reviews .box div{
-  margin-left: calc(80px + 1em);
-  margin-top: -80px;
+  margin-left: 1em;
+  margin-top: -.4em;
 }
 #user-reviews .box span{
   font-size: 18pt;
   line-height: 18pt;
-  /*display: block;*/
 }
 #user-reviews .box p{
   color: var(--black1);
+  font-size: 15pt;
 }
 #user-reviews .box .name{
   color: var(--orange1);
@@ -236,7 +268,7 @@ footer{
   justify-content: center;
   align-items: flex-end;
   transition: all .4s ease;
-  filter: opacity(0.8) blur(3px);
+  filter: opacity(0) blur(3px);
   cursor: pointer;
 }
 .contacts .box > .content:hover{
@@ -252,6 +284,20 @@ footer{
 .contacts .box > .content > span{
   text-align: center;
 }
+.contacts button{
+  background: rgba(0, 0, 0, 0.0);
+  color: var(--white2);
+  border: 2px solid var(--white2);
+  font-size: 14pt;
+  padding-left: .4em;
+  padding-right: .4em;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+.contacts button:hover{
+  color: var(--orange1);
+  background: var(--white2);
+}
 
 /*about us*/
 .about > .background-about{
@@ -260,25 +306,27 @@ footer{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: absolute;
 }
 .about h2{
   color: var(--orange1);
+  line-height: 1.2em;
 }
 .about .box{
   box-shadow: 0 0 5px var(--black2);
-  border-radius: .5em;
   margin-left: auto;
   margin-right: auto;
   width: 20vw;
   min-width: 500px;
-  padding: 1rem;
-  position: relative;
-  background: rgba(0, 0, 0, 0.3);
   background-image: url('images/studio-blur.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.about .box > .inner{
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
 }
 .about .hero-right{
   color: var(--black2);
@@ -286,19 +334,15 @@ footer{
 }
 
 /*Maps*/
-.about > .background-contact{
-  background-image: url('images/studio-blur.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+#contact > .background-contact{
+  background-color: var(--white2);
 }
 .maps {
   margin: 0;
   padding: 0;
 }
 .maps iframe{
-  width: calc(99vw - var(--hero-left-size));
+  width: calc(99vw - var(--not-hero-left-size));
   height: 100vh;
 }
 
@@ -315,7 +359,6 @@ footer{
   padding: 1em;
   margin: 1em;
   background: var(--white1);
-  border-radius: .3em;
 }
 .album h3{
   color: var(--orange1);
@@ -325,4 +368,150 @@ footer{
 }
 #album-thumbnail .col{
   padding: .1em;
+}
+  color: var(--black2);
+  text-align: center;
+}
+
+/*Maps*/
+#contact {
+  background-color: var(--white2);
+}
+.maps {
+  margin: 0;
+  padding: 0;
+}
+.maps iframe{
+  width: calc(99vw - var(--not-hero-left-size));
+  height: 100vh;
+}
+
+/*Gallery*/
+.gallery{
+  background: var(--white2);
+}
+.background-gallery{
+  background: var(--white2);
+  min-height: 100vh;
+}
+.album{
+  border: 3px solid var(--orange1);
+  padding: 1em;
+  margin: 1em;
+  background: var(--white1);
+}
+.album h3{
+  color: var(--orange1);
+}
+.album h4{
+  color: var(--black2);
+}
+#album-thumbnail .col{
+  padding: .1em;
+}
+
+/* responsive breakpoints */
+/* default: desktop 1200+ */
+
+/*-------------------------------------------*/
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+  :root{
+    --hero-left-size: 270px;
+    --not-hero-left-size: 270px;
+  }
+  *{
+    font-size: 16pt;
+  }
+  p{
+    font-size: 14pt;
+  }
+  .hero > .background{
+    background-position: center;
+  }
+  footer span, footer p{
+    font-size: 12pt;
+  }
+  .contacts button{
+    font-size: 12pt;
+  }
+}
+
+/*-------------------------------------------*/
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {
+  :root{
+    --hero-left-size: 270px;
+    --not-hero-left-size: 270px;
+  }
+  .hero{
+    margin-top: 50px;
+  }
+  .hero-left{
+    margin-left: -270px;
+    position: absolute;
+  }
+  #home .hero-right,.hero .hero-right{
+    width: 100vw;
+    margin-left: 0;
+  }
+  #home h1{
+    font-size: 80pt;
+    line-height: .8em;
+  }
+  #details img{
+    height: 200px;
+  }
+  .maps iframe{
+    margin-left: 5vw;
+    width: 90vw;
+    height: 90vh;
+  }
+  #contact {
+    height: 90vh;
+  }
+  .hide-lg{
+    display: inherit;
+  }
+  .hide-md{
+    display: none;
+  }
+}
+
+/*-------------------------------------------*/
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+  #home h3{
+    font-size: 24pt;
+    line-height: .7em;
+  }
+}
+
+/*-------------------------------------------*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  h3{
+    font-size: 28pt;
+    line-height: 1em;
+  }
+  h4{
+    font-size: 16t;
+    line-height: 1.2em;
+  }
+  .about .box{
+    min-width: 95vw;
+  }
+  #home .head{
+    font-size: 40pt;
+  }
+  footer .col{
+    padding: 0;
+    padding-top: 1em;
+  }
+  #team .col-md-6{
+    padding-top: 1em;
+  }
+  #team .col{
+    padding: 0;
+  }
 }
