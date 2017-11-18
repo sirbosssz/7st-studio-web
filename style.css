@@ -161,7 +161,7 @@ footer .col{
   /* position: absolute; */
   margin-left: var(--not-hero-left-size);
 }
-#home .hero-left{
+#home .hero-left, .nav .hero-left{
   width: var(--hero-left-size);
   transition: all .4s;
 }
@@ -376,27 +376,46 @@ footer .col{
 }
 
 /*Gallery*/
-.gallery{
+#gallery{
+  background: var(--black1);
+}
+#gallery .hero-right{
   background: var(--white2);
+  color: var(--black1);
 }
-.background-gallery{
-  background: var(--white2);
-  min-height: 100vh;
-}
-.album{
-  border: 3px solid var(--orange1);
-  padding: 1em;
-  margin: 1em;
-  background: var(--white1);
-}
-.album h3{
+#gallery h4{
+  padding: .5em;
   color: var(--orange1);
 }
-.album h4{
-  color: var(--black2);
+#gallery .album{
+  column-width: 300px;
+  column-gap: .5em;
 }
-#album-thumbnail .col{
-  padding: .1em;
+#gallery .album > figure{
+  /* border: 1.4px solid var(--white1); */
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  background: var(--orange1);
+  margin: 0 0 .7em;
+  padding: .5em;
+  padding-bottom: 0;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+  transition: all .3s;
+  cursor: pointer;
+}
+.album figcaption{
+  border-top: 2px solid var(--white1);
+  color: var(--white1);
+  margin-top: .1em;
+  text-align: right;
+  padding-right: 1em;
+  padding-left: 1em; 
+  padding-bottom: .4rem;
+  line-height: 1.3rem;
+  font-size: 16pt;
+}
+.album img{
+  object-fit: cover;
 }
 
 /* responsive breakpoints */
@@ -423,6 +442,9 @@ footer .col{
   }
   .contacts button{
     font-size: 12pt;
+  }
+  #gallery .album{
+    column-width: 220px;
   }
 }
 
@@ -474,11 +496,18 @@ footer .col{
     font-size: 24pt;
     line-height: 1em;
   }
+  #gallery .album{
+    column-width: 200px;
+  }
+  #gallery .album figcaption{
+    font-size: 14pt;
+  }
 }
 
 /*-------------------------------------------*/
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
+  
   h3{
     font-size: 28pt;
     line-height: 1em;
