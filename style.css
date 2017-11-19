@@ -87,10 +87,25 @@ footer .col{
 .inner{
   display: inherit;
 }
+.navbutton{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: var(--orange1);
+  z-index: 11;
+  top: 0
+}
+.navfilter{
+  visibility: hidden;
+  position: fixed;
+  z-index: 9;
+  background: var(--black2);
+  filter: opacity(.7);
+}
 /*spectify id */
 /* page */
 #navbar .hero-inner{
-  z-index: 1000;
+  z-index: 10;
 }
 #nav-logo{
   display: none;
@@ -482,9 +497,13 @@ footer .col{
     --hero-left-size: 270px;
     --not-hero-left-size: 270px;
   }
-  .hero-left{
+  
+  #navbar .hero-left{
     margin-left: -270px;
-    position: absolute;
+    position: fixed;
+  }
+  #navbar .shownav{
+    margin-left: 0;
   }
   #home .hero-right,.hero .hero-right{
     width: 100vw;
@@ -497,7 +516,7 @@ footer .col{
   #details img{
     height: 200px;
   }
-  #contact, #team{
+  #contact, #team, #gallery{
     margin-top: 60px;
   }
   .maps iframe{

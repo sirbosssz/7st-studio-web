@@ -10,7 +10,7 @@ const navBar = document.getElementById('navbar'),
     buttonTeam = document.getElementById('nav-button-team'),
     buttonContact = document.getElementById('nav-button-contact'),
     navLogo = document.getElementById('nav-logo');
-    navLogoHome = document.getElementById('nav-logo-home');
+navLogoHome = document.getElementById('nav-logo-home');
 
 function hidePage(page1, page2, page3, page4) {
     page1.classList.add('hide');
@@ -34,6 +34,7 @@ function navSeclect(button) {
 
 function shrinkNav() {
     navBar.classList.remove('nav');
+    navLogoHome.parentNode.style.paddingRight = '.5em';
     navLogoHome.style.filter = 'opacity(0)';
     setTimeout(() => {
         navLogoHome.style.display = 'none';
@@ -45,6 +46,7 @@ function shrinkNav() {
 }
 function extendNav() {
     navBar.classList.add('nav');
+    navLogoHome.parentNode.style.paddingRight = '1.5rem';
     navLogo.style.filter = 'opacity(0)';
     setTimeout(() => {
         navLogo.style.display = 'none';
@@ -77,17 +79,35 @@ function pageGallery() {
     showPage(gallery)
     navSeclect(buttonGallery)
 }
-function pageTeam(){
+function pageTeam() {
     shrinkNav()
     hidePage(index, about, gallery, contact)
     navNotSelect(buttonIndex, buttonContact, buttonGallery, buttonAbout)
     showPage(team)
     navSeclect(buttonTeam)
 }
-function pageContact(){
+function pageContact() {
     shrinkNav()
     hidePage(index, about, team, gallery)
     navNotSelect(buttonIndex, buttonGallery, buttonTeam, buttonAbout)
     showPage(contact)
     navSeclect(buttonContact)
+}
+
+//navbar
+let isNavShow = false;
+function showNav() {
+    console.log(isNavShow);
+    if (isNavShow) {
+        hideNav()
+    } else {
+        navBar.children[0].classList.add('shownav')
+        document.getElementsByClassName('navfilter')[0].style.visibility = 'inherit'
+        isNavShow = true
+    }
+}
+function hideNav() {
+    isNavShow = false
+    navBar.children[0].classList.remove('shownav')
+    document.getElementsByClassName('navfilter')[0].style.visibility = 'hidden'
 }
