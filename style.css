@@ -32,6 +32,7 @@ html{
 a{
   color: var(--orange1);
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover{
   color: var(--orange2);
@@ -86,11 +87,47 @@ footer .col{
 .inner{
   display: inherit;
 }
+.navbutton{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: var(--orange1);
+  z-index: 11;
+  top: 0
+}
+.navfilter{
+  visibility: hidden;
+  position: fixed;
+  z-index: 9;
+  background: var(--black2);
+  filter: opacity(.7);
+}
 /*spectify id */
+/* page */
+#navbar .hero-inner{
+  z-index: 10;
+}
+#nav-logo{
+  display: none;
+  filter: opacity(0);
+  transition: all .2s;
+}
+#nav-logo-home{
+  transition: all .2s;
+}
+#index, #about, #gallery, #team, #contact{
+  /* display: none; */
+  z-index: 9;
+}
+.hide{
+  display: none;
+}
+
 /*index*/
 .hero{
   color: var(--white1);
   background: var(--black1);
+  transition: all .4s;
 }
 .hero > .background{
   background-image: url('images/background.png');
@@ -105,7 +142,7 @@ footer .col{
   position: absolute;
   width: var(--not-hero-left-size);
   height: 100vh;
-  transition: all .4s;
+  transition: all .5s;
 }
 .hero > .hero-inner{
   display: flex;
@@ -160,12 +197,13 @@ footer .col{
   min-height: 100vh;
   /* position: absolute; */
   margin-left: var(--not-hero-left-size);
+  transition: all .4s;
 }
 #home .hero-left, .nav .hero-left{
   width: var(--hero-left-size);
   transition: all .4s;
 }
-#home .hero-right{
+.home .hero-right{
   width: calc(100vw - var(--hero-left-size));
   margin-left: var(--hero-left-size);
 }
@@ -175,11 +213,12 @@ footer .col{
 #details{
   margin-top: 20px;
   background: var(--white1);
+  color: var(--black1);
   margin-bottom: 20px;
   min-height: 400px;
 }
 #details img{
-  height: 400px;
+  height: 300px;
   object-fit: cover;
 }
 #details p {
@@ -386,14 +425,17 @@ footer .col{
 #gallery h4{
   padding: .5em;
   color: var(--orange1);
+  font-weight: bold;
 }
 #gallery .album{
-  column-width: 300px;
-  column-gap: .5em;
+  padding-left: .6em;
+  padding-right: .6em;
+  column-width: 250px;
+  column-gap: .7em;
 }
 #gallery .album > figure{
   /* border: 1.4px solid var(--white1); */
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
   background: var(--orange1);
   margin: 0 0 .7em;
   padding: .5em;
@@ -412,7 +454,7 @@ footer .col{
   padding-left: 1em; 
   padding-bottom: .4rem;
   line-height: 1.3rem;
-  font-size: 16pt;
+  font-size: 14pt;
 }
 .album img{
   object-fit: cover;
@@ -455,9 +497,13 @@ footer .col{
     --hero-left-size: 270px;
     --not-hero-left-size: 270px;
   }
-  .hero-left{
+  
+  #navbar .hero-left{
     margin-left: -270px;
-    position: absolute;
+    position: fixed;
+  }
+  #navbar .shownav{
+    margin-left: 0;
   }
   #home .hero-right,.hero .hero-right{
     width: 100vw;
@@ -470,7 +516,7 @@ footer .col{
   #details img{
     height: 200px;
   }
-  #contact, #team{
+  #contact, #team, #gallery{
     margin-top: 60px;
   }
   .maps iframe{
