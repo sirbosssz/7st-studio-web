@@ -27,27 +27,31 @@
 
   <section class="inner">
     <!-- leftside nav -->
-    <section class="hero nav">
+    <section id="navbar" class="hero nav">
       <div class="hero-inner hero-left">
         <div class="container" style="text-align: right; padding-right: 1.5rem;">
-          <span>
+          <span id="nav-logo">
+            <img src="icon/icon.png" alt="studio icon" width="70px">
+            <h3>st. Studio</h3>
+          </span>
+          <span id="nav-logo-home">
             <img src="icon/icon.png" alt="studio icon" width="100px">
           </span>
           <ul>
             <li>
-              <a href="#" class="selected">หน้าแรก</a>
+              <a class="selected" onclick="pageIndex()" id="nav-button-home">หน้าแรก</a>
             </li>
             <li>
-              <a href="aboutus.html">เกี่ยวกับสตูดิโอ</a>
+              <a onclick="pageAbout()" id="nav-button-about">เกี่ยวกับสตูดิโอ</a>
             </li>
             <li>
-              <a href="gallery.html">อัลบัมรูป</a>
+              <a onclick="pageGallery()" id="nav-button-gallery">อัลบัมรูป</a>
             </li>
             <li>
-              <a href="team.html">ทีมของเรา</a>
+              <a onclick="pageTeam()" id="nav-button-team">ทีมของเรา</a>
             </li>
             <li>
-              <a href="contact.html">ที่อยู่ติดต่อ</a>
+              <a onclick="pageContact()" id="nav-button-contact">ที่อยู่ติดต่อ</a>
             </li>
             <li>
               <a target="_blank" href="https://www.facebook.com">
@@ -67,69 +71,205 @@
         </div>
       </div>
     </section>
-    <!-- hero section -->
-    <section id="home" class="hero fullscreen">
-      <div class="background hero-right"></div>
+
+    <!-- index page -->
+    <section id="index" class="home">
+      <!-- hero section -->
+      <section id="home" class="hero fullscreen">
+        <div class="background hero-right"></div>
+        <div class="hero-inner hero-right">
+          <div class="container" style="text-align: center;">
+            <span>
+              <h1>7st. Studio</h1>
+              <h3>พวกเราคือ Street Photographer.</h3>
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- details section -->
+      <section id="details">
+        <p>รายละเอียดเล็กๆ 1 paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat.</p>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col col-11">
+              <img src="images/studio.jpg" alt="example" width="100%">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- user reveiws section -->
+      <section id="user-reviews">
+        <h3>ความคิดเห็นจากผู้ใช้บริการ</h3>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <img src="images/profile.jpg" alt="profile" width="80px;">
+                <div>
+                  <span class="name">Jeon Jeong-guk</span>
+                  <span class="user">@jungkook</span>
+                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <img src="images/profile.jpg" alt="profile" width="80px;">
+                <div>
+                  <span class="name">Jeon Jeong-guk</span>
+                  <span class="user">@jungkook</span>
+                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <img src="images/profile.jpg" alt="profile" width="80px;">
+                <div>
+                  <span class="name">Jeon Jeong-guk</span>
+                  <span class="user">@jungkook</span>
+                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- about page -->
+    <section id="about" class="hero fullscreen about">
+      <div class="background-about hero-right"></div>
       <div class="hero-inner hero-right">
-        <div class="container" style="text-align: center;">
+        <div class="container">
+          <div class="box">
+            <div class="inner">
+              <h2>About Us</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery page -->
+    <section id="gallery" class="hero fullscreen">
+      <div class="hero-right">
+        <div class="container-fluid" style="text-align: center;">
           <span>
-            <h1>7st. Studio</h1>
-            <h3>พวกเราคือ Street Photographer.</h3>
+            <h4>ผลงานของพวกเรา</h4>
           </span>
-        </div>
-      </div>
-    </section>
-    <!-- details section -->
-    <section id="details">
-      <p>รายละเอียดเล็กๆ 1 paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-11">
-            <img src="images/studio.jpg" alt="example" width="100%">
+          <div class="album">
+            <figure onclick="alert('popup')">
+              <img src="images/studio.jpg" alt="" width="100%;">
+              <figcaption>ภาพถ่ายของสตูดิโอ</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/profile.jpg" alt="" width="100%;">
+              <figcaption>จุงกุกหน้าหล่อ</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/studio-blur.jpg" alt="" width="100%;">
+              <figcaption>ภาพถ่ายของสตูดิโอแบบเบลอ
+                <br>(ว่ารักแถบ)</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/background.png" alt="" width="100%;">
+              <figcaption>ภาพพื้นหลังหลัก</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/profile.jpg" alt="" width="100%;">
+              <figcaption>จุงกุกอีกแล้ว</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/profile.jpg" alt="" width="100%;">
+              <figcaption>จุงกุกอะรัวๆ</figcaption>
+            </figure>
+            <figure onclick="alert('popup')">
+              <img src="images/background.png" alt="" width="100%;">
+              <figcaption>ภาพพื้นหลัง Again</figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </section>
-    <!-- user reveiws section -->
-    <section id="user-reviews">
-      <h3>ความคิดเห็นจากผู้ใช้บริการ</h3>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 col-lg-4">
-            <div class="box">
-              <img src="images/profile.jpg" alt="profile" width="80px;">
-              <div>
-                <span class="name">Jeon Jeong-guk</span>
-                <span class="user">@jungkook</span>
-                <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
-              </div>
+
+    <!-- team page -->
+    <section id="team" class="hero fullscreen">
+      <div class="hero-right contacts">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3>ทีมของเรา</h3>
+              <h4>We are the best street fashion studio.</h4>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="box">
-              <img src="images/profile.jpg" alt="profile" width="80px;">
-              <div>
-                <span class="name">Jeon Jeong-guk</span>
-                <span class="user">@jungkook</span>
-                <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+            <div class="col-md-6 col-12">
+              <div class="row">
+                <div class="col">
+                  <div class="box">
+                    <div class="content">
+                      <span>Jungkook
+                        <br>
+                        <button>ดูโปรไฟล์</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="box">
+                    <div class="content">
+                      <span>Jungkook
+                        <br>
+                        <button>ดูโปรไฟล์</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="box">
-              <img src="images/profile.jpg" alt="profile" width="80px;">
-              <div>
-                <span class="name">Jeon Jeong-guk</span>
-                <span class="user">@jungkook</span>
-                <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+              <div class="row">
+                <div class="col">
+                  <div class="box">
+                    <div class="content">
+                      <span>Jungkook
+                        <br>
+                        <button>ดูโปรไฟล์</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="box">
+                    <div class="content">
+                      <span>Jungkook
+                        <br>
+                        <button>ดูโปรไฟล์</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- maps page -->
+    <section id="contact" class="hero fullscreen about">
+      <div class="hero-inner hero-right" style="background:var(--white2)">
+        <div class="maps">
+          <h4 class="hide-lg">ที่อยู่ติดต่อ</h4>
+          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwkv-wrwafo4KGFqCLaHKD01DuZN_z2AI&q=คณะไอที+ลาดกระบัง"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- footer -->
     <footer>
       <div class="container">
@@ -146,6 +286,9 @@
       </div>
     </footer>
   </section>
+
+  <!-- custom js -->
+  <script src="page.js"></script>
 
 </body>
 
