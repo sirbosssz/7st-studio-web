@@ -87,6 +87,36 @@ footer .col{
 .inner{
   display: inherit;
 }
+.navbarmobile{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9;
+  text-align: center;
+  padding: 5px;
+  transition: all .3s ease;
+  background: var(--black2);
+}
+.navbarmobile.home{
+  filter: opacity(0);
+}
+.navbarmobile span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white1);
+}
+.navbarmobile span img{
+  height: 50px;
+  width: 50px;
+  margin-right: .5em;
+  display: inline-block;
+}
+.navbarmobile span h3{
+  display: inline-block;
+  line-height: 1em;
+}
 .navbutton{
   position: fixed;
   width: 60px;
@@ -98,6 +128,7 @@ footer .col{
 .navfilter{
   visibility: hidden;
   position: fixed;
+  top: 0;
   z-index: 9;
   background: var(--black2);
   filter: opacity(.7);
@@ -501,6 +532,7 @@ footer .col{
   #navbar .hero-left{
     margin-left: -270px;
     position: fixed;
+    top: 0;
   }
   #navbar .shownav{
     margin-left: 0;
