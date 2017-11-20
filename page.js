@@ -61,59 +61,76 @@ function extendNav() {
 
 // page redirect
 function pageIndex() {
-    extendNav()
-    hidePage(about, gallery, team, contact)
-    navNotSelect(buttonAbout, buttonContact, buttonTeam, buttonGallery)
-    showPage(index)
-    navSeclect(buttonIndex)
-    navMobile.classList.add('home')
-    inHome = true
-    hideNav()
-    document.getElementById('nav-icon').classList.toggle('open')
+    scrollToTop()
+    setTimeout(() => {
+        extendNav()
+        hidePage(about, gallery, team, contact)
+        navNotSelect(buttonAbout, buttonContact, buttonTeam, buttonGallery)
+        showPage(index)
+        navSeclect(buttonIndex)
+        navMobile.classList.add('home')
+        inHome = true
+        hideNav()
+        document.getElementById('nav-icon').classList.remove('open')
+    }, 600)
 }
 function pageAbout() {
-    shrinkNav()
-    hidePage(index, gallery, team, contact)
-    navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonGallery)
-    showPage(about)
-    navSeclect(buttonAbout)
-    navMobile.classList.remove('home')
-    inHome = false
-    hideNav()
-    document.getElementById('nav-icon').classList.toggle('open')
+    scrollToTop()
+    setTimeout(() => {
+        shrinkNav()
+        hidePage(index, gallery, team, contact)
+        navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonGallery)
+        showPage(about)
+        navSeclect(buttonAbout)
+        navMobile.classList.remove('home')
+        inHome = false
+        hideNav()
+        document.getElementById('nav-icon').classList.remove('open')
+    }, 600)
+
+    // window.scrollTo(0,0)
 }
 function pageGallery() {
-    shrinkNav()
-    hidePage(index, about, team, contact)
-    navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonAbout)
-    showPage(gallery)
-    navSeclect(buttonGallery)
-    navMobile.classList.remove('home')
-    inHome = false
-    hideNav()
-    document.getElementById('nav-icon').classList.toggle('open')
+    scrollToTop()
+    setTimeout(() => {
+        shrinkNav()
+        hidePage(index, about, team, contact)
+        navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonAbout)
+        showPage(gallery)
+        navSeclect(buttonGallery)
+        navMobile.classList.remove('home')
+        inHome = false
+        hideNav()
+        document.getElementById('nav-icon').classList.remove('open')
+    }, 600)
 }
 function pageTeam() {
-    shrinkNav()
-    hidePage(index, about, gallery, contact)
-    navNotSelect(buttonIndex, buttonContact, buttonGallery, buttonAbout)
-    showPage(team)
-    navSeclect(buttonTeam)
-    navMobile.classList.remove('home')
-    inHome = false
-    hideNav()
-    document.getElementById('nav-icon').classList.toggle('open')
+    scrollToTop()
+    setTimeout(() => {
+        shrinkNav()
+        hidePage(index, about, gallery, contact)
+        navNotSelect(buttonIndex, buttonContact, buttonGallery, buttonAbout)
+        showPage(team)
+        navSeclect(buttonTeam)
+        navMobile.classList.remove('home')
+        inHome = false
+        hideNav()
+        document.getElementById('nav-icon').classList.remove('open')
+    }, 600)
 }
 function pageContact() {
-    shrinkNav()
-    hidePage(index, about, team, gallery)
-    navNotSelect(buttonIndex, buttonGallery, buttonTeam, buttonAbout)
-    showPage(contact)
-    navSeclect(buttonContact)
-    navMobile.classList.remove('home')
-    inHome = false
-    hideNav()
-    document.getElementById('nav-icon').classList.toggle('open')
+    scrollToTop()
+    setTimeout(() => {
+        shrinkNav()
+        hidePage(index, about, team, gallery)
+        navNotSelect(buttonIndex, buttonGallery, buttonTeam, buttonAbout)
+        showPage(contact)
+        navSeclect(buttonContact)
+        navMobile.classList.remove('home')
+        inHome = false
+        hideNav()
+        document.getElementById('nav-icon').classList.remove('open')
+    }, 600)
 }
 
 //navbar
@@ -133,6 +150,6 @@ function hideNav() {
     document.getElementsByClassName('navfilter')[0].style.visibility = 'hidden'
 }
 
-document.getElementById('nav-icon').onclick = function() {
+document.getElementById('nav-icon').onclick = function () {
     this.classList.toggle('open');
 }

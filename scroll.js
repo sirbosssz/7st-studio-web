@@ -17,3 +17,7 @@ function checkScroll() {
         navMobile.classList.add('hide-lg')
     }
 }
+
+function scrollToTop() {
+    $("html, body").animate({ scrollTop: 0 }, 600)
+}
