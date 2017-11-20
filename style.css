@@ -62,6 +62,7 @@ footer{
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
+  z-index: 10;
 }
 footer .col{
   text-align: right;
@@ -83,6 +84,50 @@ footer .col{
   background: var(--white2);
   padding: 1em;
   display: none;
+}
+.scroll-to-top{
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  color: var(--orange1);
+  background: var(--black2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20pt;
+  cursor: pointer;
+}
+.share{
+  padding-top: .5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.share .email{
+  background: #ff0000;
+  height: 28px;
+  width: 75px;
+  position: relative;
+  border-radius: 4px;
+}
+.share .email:hover{
+  background: #dd0000;
+  color: var(--white1);
+}
+.share .email i{
+  position: absolute;
+  font-size: 14pt;
+  top: 4px;
+  left: 9px;
+}
+.share .email span{
+  font-size: 12pt;
+  position: absolute;
+  right: 9px;
+  bottom: -6px;
+}
+.share iframe, .share a{
+  margin-left: .5em;
 }
 .inner{
   display: inherit;
@@ -127,10 +172,10 @@ footer .col{
   top: 0;
 }
 #nav-icon{
-  width: 45px;
+  width: 35px;
   height: 30px;
   position: relative;
-  margin: 12px 10px auto;
+  margin: 16px 10px auto;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
@@ -138,10 +183,10 @@ footer .col{
 #nav-icon span{
   display: block;
   position: absolute;
-  height: 6px;
+  height: 5px;
   width: 100%;
   background: var(--orange1);
-  border-radius: 9px;
+  border-radius: 3px;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -152,15 +197,15 @@ footer .col{
 }
 
 #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
-  top: 14px;
+  top: 11px;
 }
 
 #nav-icon span:nth-child(4) {
-  top: 28px;
+  top: 22px;
 }
 
 #nav-icon.open span:nth-child(1) {
-  top: 14px;
+  top: 11px;
   width: 0%;
   left: 50%;
 }
@@ -306,19 +351,26 @@ footer .col{
   background: var(--white1);
   color: var(--black1);
   margin-bottom: 20px;
-  min-height: 400px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+#details div{
+  background: var(--black2);
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50%;
 }
 #details img{
-  height: 300px;
   object-fit: cover;
+  object-position: top;
 }
-#details p {
-  text-align: center;
+#details p , #details h4{
   max-width: 90vw;
   width: 600px;
   margin: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
 }
 #details .row{
   padding-bottom: 2em;
@@ -401,6 +453,23 @@ footer .col{
   background-image: url('images/profile.jpg');
   background-size: cover;
   position: relative;
+  box-shadow: 0 0 3px var(--orange1);
+}
+.contacts .pic1 .box{
+  background-image: url('team/Profile1.jpg');
+  background-position: top;
+}
+.contacts .pic2 .box{
+  background-image: url('team/Profile2.jpg');
+  background-position: top;
+}
+.contacts .pic3 .box{
+  background-image: url('team/Profile3.jpg');
+  background-position: center;
+}
+.contacts .pic4 .box{
+  background-image: url('team/Profile4.jpg');
+  background-position: center;
 }
 .contacts .box > .content{
   background: rgba(0, 0, 0, 0.0);
@@ -428,15 +497,18 @@ footer .col{
 }
 .contacts .box > .content > span{
   text-align: center;
+  line-height: 1em;
 }
 .contacts button{
   background: rgba(0, 0, 0, 0.0);
   color: var(--white2);
   border: 2px solid var(--white2);
   font-size: 14pt;
+  margin-top: .4em;
   padding: .2em;
   padding-left: .6em;
   padding-right: .6em;
+  padding-top: .4em;
   cursor: pointer;
   transition: all .4s ease;
 }
@@ -548,6 +620,44 @@ footer .col{
 .album img{
   object-fit: cover;
 }
+.photo{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  color: var(--black1);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all .3s ease;
+}
+.photo .close{
+  position: fixed;
+  font-size: 26pt;
+  top: 10px;
+  right: 1em;
+  cursor: pointer;
+}
+.photo .photo-box{
+  margin-top: 70px;
+  max-width: 80vw;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.photo .photo-box img{
+  max-width: 80vw;
+  padding-top: 1rem;
+  border-top: 2px solid var(--black1);
+}
+.photo .photo-box figcaption{
+  font-size: 26pt;
+  text-align: center;
+}
 
 /* responsive breakpoints */
 /* default: desktop 1200+ */
@@ -577,6 +687,15 @@ footer .col{
   #gallery .album{
     column-width: 220px;
   }
+  .share .email span{
+    display: none;
+  }
+  .share .email{
+    width: 30px;
+  }
+  .share .email i{
+    left: 5px;
+  }
 }
 
 /*-------------------------------------------*/
@@ -603,9 +722,6 @@ footer .col{
     font-size: 80pt;
     line-height: .8em;
   }
-  #details img{
-    height: 200px;
-  }
   #contact, #team, #gallery{
     margin-top: 60px;
   }
@@ -622,6 +738,12 @@ footer .col{
   }
   .hide-md{
     display: none;
+  }
+  #gallery .photo{
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    top: 60px;
   }
 }
 

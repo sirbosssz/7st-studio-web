@@ -34,6 +34,9 @@
         <img src="icon/icon.png" alt="studio icon" width="70px">
         <h4>st. Studio</h4>
       </span>
+      <div class="scroll-to-top" onclick="scrollToTop()">
+          <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </div>
     </div>
     <div class="navbutton hide-lg" onclick="showNav()">
       <div id="nav-icon">
@@ -71,18 +74,15 @@
             <li>
               <a onclick="pageContact()" id="nav-button-contact">ที่อยู่ติดต่อ</a>
             </li>
-            <li>
-              <a target="_blank" href="https://www.facebook.com">
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>
-              </a>&nbsp;
-              <a target="_blank" href="https://twitter.com">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>&nbsp;
-              <a target="_blank" href="https://www.instagram.com/">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>&nbsp;
-              <a target="_blank" href="#">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            <li class='share'>
+              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fsirbosssz.github.io%2Fmultiproweb%2F&layout=button&size=large&mobile_iframe=true&appId=186666345237905&width=73&height=28"
+                width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="7st. Studio เปิดเว็บแล้วววว เข้ามาดูกันเถอะ"
+                data-show-count="false">Tweet</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <a class='email' href="mailto:spectreb.boss@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>email</span>
               </a>
             </li>
           </ul>
@@ -106,29 +106,36 @@
       </section>
       <!-- details section -->
       <section id="details">
-        <p>รายละเอียดเล็กๆ 1 paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.</p>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col col-11">
-              <img src="images/studio.jpg" alt="example" width="100%">
-            </div>
-          </div>
+        <div>
+            <img src="icon/icon.png" alt="" width='60px'>
         </div>
+        <h4>What is 7st. Studio?</h4>
+        <p>7st. Studio เรียกว่า เซเว่นสตรีท สตูดิโอ เป็นสตูดีโอแห่งการถ่ายภาพ potrait ต่างๆ โดยเน้นแนวทางไปที่ธีม Street
+          Fashion ที่เห็นได้ทั่วไป</p>
+
       </section>
       <!-- user reveiws section -->
       <section id="user-reviews">
-        <h3>ความคิดเห็นจากผู้ใช้บริการ</h3>
+        <h4>การันตีคุณภาพจากรีวิว</h4>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <img src="images/profile.jpg" alt="profile" width="80px;">
+                <img src="gallery/Nike advertising/07.jpg" alt="profile" width="80px;">
                 <div>
-                  <span class="name">Jeon Jeong-guk</span>
-                  <span class="user">@jungkook</span>
-                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+                  <span class="name">Grace Alisa</span>
+                  <span class="user">model</span>
+                  <p>ช่างภาพเก่งมาก ใจดี และมีอัธยาศัยดี ถ้ามีโอกาสร่วมงานกันอีกจะรู้สึกยินดีอย่างยิ่งค่ะ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <img src="images/profile2.jpg" alt="profile" width="80px;">
+                <div>
+                  <span class="name">SZand Yanika</span>
+                  <span class="user">viewer</span>
+                  <p>งานดีที่ต้องหนับหนุนความภาคภูมิใจของชาวลาดกระบัง คนทางบ้านภูมิใจมากค่ะ</p>
                 </div>
               </div>
             </div>
@@ -137,18 +144,8 @@
                 <img src="images/profile.jpg" alt="profile" width="80px;">
                 <div>
                   <span class="name">Jeon Jeong-guk</span>
-                  <span class="user">@jungkook</span>
-                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box">
-                <img src="images/profile.jpg" alt="profile" width="80px;">
-                <div>
-                  <span class="name">Jeon Jeong-guk</span>
-                  <span class="user">@jungkook</span>
-                  <p>ผมชอบรูปที่ถ่ายจากสตูดิโอนี้มากๆครับ ถ่ายให้ผมหล่อมากเลย</p>
+                  <span class="user">viewer</span>
+                  <p>รูปภาพที่ถ่ายมาจัดวางองค์ประกอบ แสง เงาดี</p>
                 </div>
               </div>
             </div>
@@ -165,9 +162,7 @@
           <div class="box">
             <div class="inner">
               <h2>About Us</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <p>7st. Studio จัดตั้งเมื่อ 29 กันยายน 2560 โดยมีจุดประสงค์ที่จะแสดงผลงานภาพถ่ายต่างๆเกี่ยวกับ Street Fashion ให้ผู้คนทั่วไปได้รับชม ซึ่งทีมงาน 7st. Studio นั้นรับงานถ่ายภาพทั่วไป โดยเฉพาะงานภาพแนว Protrait โดยสามารถติดต่อช่างภาพได้ตามที่อยู่ติดต่อในเว็บ</p>
             </div>
           </div>
         </div>
@@ -182,42 +177,148 @@
             <h4>ผลงานของพวกเรา</h4>
           </span>
           <div class="album">
-            <figure onclick="alert('popup')">
-              <img src="images/studio.jpg" alt="" width="100%;">
-              <figcaption>ภาพถ่ายของสตูดิโอ</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/01.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#01</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/profile.jpg" alt="" width="100%;">
-              <figcaption>จุงกุกหน้าหล่อ</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/02.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#02</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/studio-blur.jpg" alt="" width="100%;">
-              <figcaption>ภาพถ่ายของสตูดิโอแบบเบลอ
-                <br>(ว่ารักแถบ)</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/03.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#03</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/background.png" alt="" width="100%;">
-              <figcaption>ภาพพื้นหลังหลัก</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/04.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#04</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/profile.jpg" alt="" width="100%;">
-              <figcaption>จุงกุกอีกแล้ว</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/05.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#05</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/profile.jpg" alt="" width="100%;">
-              <figcaption>จุงกุกอะรัวๆ</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/06.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#06</figcaption>
             </figure>
-            <figure onclick="alert('popup')">
-              <img src="images/background.png" alt="" width="100%;">
-              <figcaption>ภาพพื้นหลัง Again</figcaption>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/07.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#07</figcaption>
             </figure>
-          </div>
-          <div class="photo">
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/08.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#08</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/09.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#09</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Nike advertising/10.jpg" alt="" width="100%;">
+              <figcaption>Nike Advertising#10</figcaption>
+            </figure>
+
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/01.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #01</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/02.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #02</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/03.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #03</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/04.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #04</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/05.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #05</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/06.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #06</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/07.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #07</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/08.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #08</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/09.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #09</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/10.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #10</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/11.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #11</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/12.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #12</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Photoset No.1/13.jpg" alt="" width="100%;">
+              <figcaption>Photoset No.1 #13</figcaption>
+            </figure>
+
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/01.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#01</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/02.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#02</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/03.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#03</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/04.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#04</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/05.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#05</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/06.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#06</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/07.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#07</figcaption>
+            </figure>
+            <figure onclick="photoOpen(this)">
+              <img src="gallery/Outdoor Series/08.jpg" alt="" width="100%;">
+              <figcaption>Outdoor Series#08</figcaption>
+            </figure>
 
           </div>
         </div>
       </div>
     </section>
+    <div class="photo" id="photo-filter" style="display:none; filter:opacity(0);">
+      <div class="close" onclick="photoClose()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="photo-box">
+        <figure id="photo">
+          <figcaption>Test</figcaption>
+          <img src="images/background.png" width="100%;">
+        </figure>
+      </div>
+    </div>
 
     <!-- team page -->
     <section id="team" class="hide hero fullscreen">
@@ -226,16 +327,16 @@
           <div class="row align-items-center">
             <div class="col">
               <h3 class="texta3">ทีมของเรา</h3>
-              <h4 class="texta4">We are the best street fashion studio.</h4>
+              <h4 class="texta4">พวกเราคือ the best street fashion studio.</h4>
             </div>
             <div class="col-md-6 col-12">
               <div class="row">
                 <div class="col pic1">
                   <div class="box">
                     <div class="content">
-                      <span>Jungkook
+                      <span>Peerapong: ช่างภาพ-ดีไซเนอร์
                         <br>
-                        <button>ดูโปรไฟล์</button>
+                        <button onclick='window.open("https://www.facebook.com/peerapong.suratchananon", "_blank")'>ดูโปรไฟล์</button>
                       </span>
                     </div>
                   </div>
@@ -243,9 +344,9 @@
                 <div class="col pic2">
                   <div class="box">
                     <div class="content">
-                      <span>Jungkook
+                      <span>Teerasak: ช่างภาพ
                         <br>
-                        <button>ดูโปรไฟล์</button>
+                        <button onclick='window.open("https://www.facebook.com/ipteerasak", "_blank")'> ดูโปรไฟล์</button>
                       </span>
                     </div>
                   </div>
@@ -255,9 +356,9 @@
                 <div class="col pic3">
                   <div class="box">
                     <div class="content">
-                      <span>Jungkook
+                      <span>Pattadon: ดูแลเว็บ-ติดต่อ
                         <br>
-                        <button>ดูโปรไฟล์</button>
+                        <button onclick='window.open("https://www.facebook.com/BossPattadon", "_blank")'>ดูโปรไฟล์</button>
                       </span>
                     </div>
                   </div>
@@ -265,9 +366,9 @@
                 <div class="col pic4">
                   <div class="box">
                     <div class="content">
-                      <span>Jungkook
+                      <span>Sanhaphat: ออกแบบคอนเทนต์
                         <br>
-                        <button>ดูโปรไฟล์</button>
+                        <button onclick='window.open("https://www.facebook.com/IMFluky", "_blank")'>ดูโปรไฟล์</button>
                       </span>
                     </div>
                   </div>
@@ -298,7 +399,7 @@
           <div class="col-12 col-md">
             <span>2017, 7st Studio</span>
             <p>1/15 Ladkranang Bangkok Thailand 10520
-              <br>081-112-2334</p>
+              <br>095-732-3164</p>
           </div>
           <div class="col">
             <p>This website made with ♥ and Javascript.</p>
