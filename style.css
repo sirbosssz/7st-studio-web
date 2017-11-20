@@ -150,6 +150,7 @@ footer .col{
   /* display: none; */
   z-index: 9;
 }
+
 .hide{
   display: none;
 }
@@ -482,7 +483,7 @@ footer .col{
   margin-top: .1em;
   text-align: right;
   padding-right: 1em;
-  padding-left: 1em; 
+  padding-left: 1em;
   padding-bottom: .4rem;
   line-height: 1.3rem;
   font-size: 14pt;
@@ -528,7 +529,7 @@ footer .col{
     --hero-left-size: 270px;
     --not-hero-left-size: 270px;
   }
-  
+
   #navbar .hero-left{
     margin-left: -270px;
     position: fixed;
@@ -585,7 +586,7 @@ footer .col{
 /*-------------------------------------------*/
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-  
+
   h3{
     font-size: 28pt;
     line-height: 1em;
@@ -625,4 +626,17 @@ footer .col{
   .alert-small-devices{
     display: block;
   }
+}
+
+/*for animation*/
+#index, #about, #gallery, #team, #contact{
+  position: relative;
+  left: 45px;
+  opacity: 0;
+}
+
+.texta1, .texta2{
+  position: relative;
+  opacity: 0;
+  top: 45px
 }
