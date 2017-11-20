@@ -30,12 +30,19 @@
   <section class="inner">
     <!-- mobile top nav -->
     <div class="navbarmobile hide-lg home">
-        <span>
-            <img src="icon/icon.png" alt="studio icon" width="70px">
-            <h4>st. Studio</h4>
-          </span>
+      <span>
+        <img src="icon/icon.png" alt="studio icon" width="70px">
+        <h4>st. Studio</h4>
+      </span>
     </div>
-    <div class="navbutton hide-lg" onclick="showNav()"></div>
+    <div class="navbutton hide-lg" onclick="showNav()">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div class="navfilter fullscreen hide-lg" onclick="hideNav()"></div>
     <!-- leftside nav -->
     <section id="navbar" class="hero nav">
@@ -82,7 +89,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- index page -->
     <section id="index" class="home">
       <!-- hero section -->
@@ -205,6 +212,9 @@
               <figcaption>ภาพพื้นหลัง Again</figcaption>
             </figure>
           </div>
+          <div class="photo">
+
+          </div>
         </div>
       </div>
     </section>
@@ -302,6 +312,7 @@
   <script src="page.js"></script>
   <script src="scroll.js"></script>
   <script src="animation.js"></script>
+  <script src="gallery.js"></script>
 
 </body>
 

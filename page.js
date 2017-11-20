@@ -68,6 +68,8 @@ function pageIndex() {
     navSeclect(buttonIndex)
     navMobile.classList.add('home')
     inHome = true
+    hideNav()
+    document.getElementById('nav-icon').classList.toggle('open')
 }
 function pageAbout() {
     shrinkNav()
@@ -77,6 +79,8 @@ function pageAbout() {
     navSeclect(buttonAbout)
     navMobile.classList.remove('home')
     inHome = false
+    hideNav()
+    document.getElementById('nav-icon').classList.toggle('open')
 }
 function pageGallery() {
     shrinkNav()
@@ -86,6 +90,8 @@ function pageGallery() {
     navSeclect(buttonGallery)
     navMobile.classList.remove('home')
     inHome = false
+    hideNav()
+    document.getElementById('nav-icon').classList.toggle('open')
 }
 function pageTeam() {
     shrinkNav()
@@ -95,6 +101,8 @@ function pageTeam() {
     navSeclect(buttonTeam)
     navMobile.classList.remove('home')
     inHome = false
+    hideNav()
+    document.getElementById('nav-icon').classList.toggle('open')
 }
 function pageContact() {
     shrinkNav()
@@ -104,6 +112,8 @@ function pageContact() {
     navSeclect(buttonContact)
     navMobile.classList.remove('home')
     inHome = false
+    hideNav()
+    document.getElementById('nav-icon').classList.toggle('open')
 }
 
 //navbar
@@ -121,4 +131,8 @@ function hideNav() {
     isNavShow = false
     navBar.children[0].classList.remove('shownav')
     document.getElementsByClassName('navfilter')[0].style.visibility = 'hidden'
+}
+
+document.getElementById('nav-icon').onclick = function() {
+    this.classList.toggle('open');
 }
