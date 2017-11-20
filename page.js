@@ -9,8 +9,9 @@ const navBar = document.getElementById('navbar'),
     buttonGallery = document.getElementById('nav-button-gallery'),
     buttonTeam = document.getElementById('nav-button-team'),
     buttonContact = document.getElementById('nav-button-contact'),
-    navLogo = document.getElementById('nav-logo');
-navLogoHome = document.getElementById('nav-logo-home');
+    navLogo = document.getElementById('nav-logo'),
+    navLogoHome = document.getElementById('nav-logo-home'),
+    navMobile = document.getElementsByClassName('navbarmobile')[0];
 
 function hidePage(page1, page2, page3, page4) {
     page1.classList.add('hide');
@@ -42,7 +43,7 @@ function shrinkNav() {
     }, 200);
     setTimeout(() => {
         navLogo.style.filter = 'opacity(1)';
-    }, 0);
+    }, 201);
 }
 function extendNav() {
     navBar.classList.add('nav');
@@ -54,7 +55,7 @@ function extendNav() {
     }, 200);
     setTimeout(() => {
         navLogoHome.style.filter = 'opacity(1)';
-    }, 0);
+    }, 201);
 }
 
 // page redirect
@@ -64,6 +65,7 @@ function pageIndex() {
     navNotSelect(buttonAbout, buttonContact, buttonTeam, buttonGallery)
     showPage(index)
     navSeclect(buttonIndex)
+    navMobile.classList.add('home')
 }
 function pageAbout() {
     shrinkNav()
@@ -71,6 +73,7 @@ function pageAbout() {
     navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonGallery)
     showPage(about)
     navSeclect(buttonAbout)
+    navMobile.classList.remove('home')
 }
 function pageGallery() {
     shrinkNav()
@@ -78,6 +81,7 @@ function pageGallery() {
     navNotSelect(buttonIndex, buttonContact, buttonTeam, buttonAbout)
     showPage(gallery)
     navSeclect(buttonGallery)
+    navMobile.classList.remove('home')
 }
 function pageTeam() {
     shrinkNav()
@@ -85,6 +89,7 @@ function pageTeam() {
     navNotSelect(buttonIndex, buttonContact, buttonGallery, buttonAbout)
     showPage(team)
     navSeclect(buttonTeam)
+    navMobile.classList.remove('home')
 }
 function pageContact() {
     shrinkNav()
@@ -92,12 +97,12 @@ function pageContact() {
     navNotSelect(buttonIndex, buttonGallery, buttonTeam, buttonAbout)
     showPage(contact)
     navSeclect(buttonContact)
+    navMobile.classList.remove('home')
 }
 
 //navbar
 let isNavShow = false;
 function showNav() {
-    console.log(isNavShow);
     if (isNavShow) {
         hideNav()
     } else {
