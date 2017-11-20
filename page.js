@@ -12,6 +12,7 @@ const navBar = document.getElementById('navbar'),
     navLogo = document.getElementById('nav-logo'),
     navLogoHome = document.getElementById('nav-logo-home'),
     navMobile = document.getElementsByClassName('navbarmobile')[0];
+var inHome = true;
 
 function hidePage(page1, page2, page3, page4) {
     page1.classList.add('hide');
@@ -66,6 +67,7 @@ function pageIndex() {
     showPage(index)
     navSeclect(buttonIndex)
     navMobile.classList.add('home')
+    inHome = true
 }
 function pageAbout() {
     shrinkNav()
@@ -74,6 +76,7 @@ function pageAbout() {
     showPage(about)
     navSeclect(buttonAbout)
     navMobile.classList.remove('home')
+    inHome = false
 }
 function pageGallery() {
     shrinkNav()
@@ -82,6 +85,7 @@ function pageGallery() {
     showPage(gallery)
     navSeclect(buttonGallery)
     navMobile.classList.remove('home')
+    inHome = false
 }
 function pageTeam() {
     shrinkNav()
@@ -90,6 +94,7 @@ function pageTeam() {
     showPage(team)
     navSeclect(buttonTeam)
     navMobile.classList.remove('home')
+    inHome = false
 }
 function pageContact() {
     shrinkNav()
@@ -98,10 +103,11 @@ function pageContact() {
     showPage(contact)
     navSeclect(buttonContact)
     navMobile.classList.remove('home')
+    inHome = false
 }
 
 //navbar
-let isNavShow = false;
+isNavShow = false;
 function showNav() {
     if (isNavShow) {
         hideNav()
