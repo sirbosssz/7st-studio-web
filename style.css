@@ -85,6 +85,50 @@ footer .col{
   padding: 1em;
   display: none;
 }
+.scroll-to-top{
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  color: var(--orange1);
+  background: var(--black2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20pt;
+  cursor: pointer;
+}
+.share{
+  padding-top: .5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.share .email{
+  background: #ff0000;
+  height: 28px;
+  width: 75px;
+  position: relative;
+  border-radius: 4px;
+}
+.share .email:hover{
+  background: #dd0000;
+  color: var(--white1);
+}
+.share .email i{
+  position: absolute;
+  font-size: 14pt;
+  top: 4px;
+  left: 9px;
+}
+.share .email span{
+  font-size: 12pt;
+  position: absolute;
+  right: 9px;
+  bottom: -6px;
+}
+.share iframe, .share a{
+  margin-left: .5em;
+}
 .inner{
   display: inherit;
 }
@@ -307,19 +351,26 @@ footer .col{
   background: var(--white1);
   color: var(--black1);
   margin-bottom: 20px;
-  min-height: 400px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+#details div{
+  background: var(--black2);
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50%;
 }
 #details img{
-  height: 300px;
   object-fit: cover;
+  object-position: top;
 }
-#details p {
-  text-align: center;
+#details p , #details h4{
   max-width: 90vw;
   width: 600px;
   margin: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
 }
 #details .row{
   padding-bottom: 2em;
@@ -402,6 +453,23 @@ footer .col{
   background-image: url('images/profile.jpg');
   background-size: cover;
   position: relative;
+  box-shadow: 0 0 3px var(--orange1);
+}
+.contacts .pic1 .box{
+  background-image: url('team/Profile1.jpg');
+  background-position: top;
+}
+.contacts .pic2 .box{
+  background-image: url('team/Profile2.jpg');
+  background-position: top;
+}
+.contacts .pic3 .box{
+  background-image: url('team/Profile3.jpg');
+  background-position: center;
+}
+.contacts .pic4 .box{
+  background-image: url('team/Profile4.jpg');
+  background-position: center;
 }
 .contacts .box > .content{
   background: rgba(0, 0, 0, 0.0);
@@ -429,15 +497,18 @@ footer .col{
 }
 .contacts .box > .content > span{
   text-align: center;
+  line-height: 1em;
 }
 .contacts button{
   background: rgba(0, 0, 0, 0.0);
   color: var(--white2);
   border: 2px solid var(--white2);
   font-size: 14pt;
+  margin-top: .4em;
   padding: .2em;
   padding-left: .6em;
   padding-right: .6em;
+  padding-top: .4em;
   cursor: pointer;
   transition: all .4s ease;
 }
@@ -616,6 +687,15 @@ footer .col{
   #gallery .album{
     column-width: 220px;
   }
+  .share .email span{
+    display: none;
+  }
+  .share .email{
+    width: 30px;
+  }
+  .share .email i{
+    left: 5px;
+  }
 }
 
 /*-------------------------------------------*/
@@ -641,9 +721,6 @@ footer .col{
   #home h1{
     font-size: 80pt;
     line-height: .8em;
-  }
-  #details img{
-    height: 200px;
   }
   #contact, #team, #gallery{
     margin-top: 60px;

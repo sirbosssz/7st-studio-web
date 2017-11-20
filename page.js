@@ -140,6 +140,7 @@ function showNav() {
         hideNav()
     } else {
         navBar.children[0].classList.add('shownav')
+        document.getElementById('nav-icon').classList.add('open')
         document.getElementsByClassName('navfilter')[0].style.visibility = 'inherit'
         isNavShow = true
     }
@@ -147,9 +148,11 @@ function showNav() {
 function hideNav() {
     isNavShow = false
     navBar.children[0].classList.remove('shownav')
+    document.getElementById('nav-icon').classList.remove('open')
     document.getElementsByClassName('navfilter')[0].style.visibility = 'hidden'
 }
 
 document.getElementById('nav-icon').onclick = function () {
     this.classList.toggle('open');
 }
+
