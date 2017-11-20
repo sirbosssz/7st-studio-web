@@ -634,8 +634,21 @@ footer .col{
   opacity: 0;
 }
 
-.texta1, .texta2{
+.texta1, .texta2, .texta3, .texta4{
   position: relative;
   opacity: 0;
   top: 45px
+}
+
+.pic1, .pic2, .pic3, .pic4{
+  position: relative;
+  opacity: 0;
+}
+
+.pic1, .pic2{
+  bottom: 45px;
+}
+
+.pic3, .pic4{
+  top: 45px;
 }
