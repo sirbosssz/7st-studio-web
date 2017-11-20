@@ -94,7 +94,8 @@ footer .col{
   height: 60px;
   z-index: 9;
   text-align: center;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
   transition: all .3s ease;
   background: var(--black2);
 }
@@ -113,7 +114,7 @@ footer .col{
   margin-right: .5em;
   display: inline-block;
 }
-.navbarmobile span h3{
+.navbarmobile span h4{
   display: inline-block;
   line-height: 1em;
 }
@@ -141,10 +142,10 @@ footer .col{
 #nav-logo{
   display: none;
   filter: opacity(0);
-  transition: all .2s;
+  transition: all .2s ease;
 }
 #nav-logo-home{
-  transition: all .2s;
+  transition: all .2s ease;
 }
 #index, #about, #gallery, #team, #contact{
   /* display: none; */
@@ -228,11 +229,11 @@ footer .col{
   min-height: 100vh;
   /* position: absolute; */
   margin-left: var(--not-hero-left-size);
-  transition: all .4s;
+  transition: all .4s ease;
 }
 #home .hero-left, .nav .hero-left{
   width: var(--hero-left-size);
-  transition: all .4s;
+  transition: all .4s ease;
 }
 .home .hero-right{
   width: calc(100vw - var(--hero-left-size));
@@ -431,10 +432,8 @@ footer .col{
   width: calc(99vw - var(--not-hero-left-size));
   height: 100vh;
 }
-
-/*Maps*/
 #contact {
-  background-color: var(--white2);
+  background-color: var(--black1);
 }
 .maps {
   margin: 0;

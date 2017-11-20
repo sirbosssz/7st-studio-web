@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onscroll="checkScroll()">
   <section class="alert fullscreen">
     <div class="alert-ie">
       <h4>คุณไม่สามารถใช้ Internet Explorer ในการเข้าเว็บนี้ กรุณาใช้ Google Chrome หรือ Browser อื่นๆที่รองรับ</h4>
@@ -30,7 +30,7 @@
     <div class="navbarmobile hide-lg home">
         <span>
             <img src="icon/icon.png" alt="studio icon" width="70px">
-            <h3>st. Studio</h3>
+            <h4>st. Studio</h4>
           </span>
     </div>
     <div class="navbutton hide-lg" onclick="showNav()"></div>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- index page -->
     <section id="index" class="home">
       <!-- hero section -->
@@ -298,6 +298,7 @@
 
   <!-- custom js -->
   <script src="page.js"></script>
+  <script src="scroll.js"></script>
 
 </body>
 
