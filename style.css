@@ -631,7 +631,6 @@ footer .col{
 /*for animation*/
 #index, #about, #gallery, #team, #contact{
   position: relative;
-  left: 45px;
   opacity: 0;
 }
 

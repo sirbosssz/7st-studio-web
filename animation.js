@@ -30,36 +30,36 @@ $("#nav-button-contact").click(function(){
 });
 
 function indexAnimation(){
-  $('#index').animate({'opacity' : '1', 'left' : '0'}, 500, 'swing');
+  $('#index').animate({'opacity' : '1'}, 500, 'swing');
   setTimeout(function(){$('.texta1').animate({'top' : '0', 'opacity' : '1'}, 500, 'swing');}, 1400);
   setTimeout(function(){$('.texta2').animate({'top' : '0', 'opacity' : '1'}, 500, 'swing');}, 1500);
   $lastId = "#"+$('#index').attr('id');
 }
 
 function aboutAnimation(){
-  $('#about').animate({'opacity' : '1', 'left' : '0'}, 500, 'swing');
+  $('#about').animate({'opacity' : '1'}, 500, 'swing');
   $lastId = "#"+$('#about').attr('id');
 }
 
 function galleryAnimation(){
-  $('#gallery').animate({'opacity' : '1', 'left' : '0'}, 500, 'swing');
+  $('#gallery').animate({'opacity' : '1'}, 500, 'swing');
   $lastId = "#"+$('#gallery').attr('id');
 }
 
 function teamAnimation(){
-  $('#team').animate({'opacity' : '1', 'left' : '0'}, 500, 'swing');
+  $('#team').animate({'opacity' : '1'}, 500, 'swing');
   $lastId = "#"+$('#team').attr('id');
 }
 
 function contactAnimation(){
-  $('#contact').animate({'opacity' : '1', 'left' : '0'}, 500, 'swing');
+  $('#contact').animate({'opacity' : '1'}, 500, 'swing');
   $lastId = "#"+$('#contact').attr('id');
 }
 
 function resetAnimation(){
   if($lastId == "#index"){
-    $('.texta1').animate({'top' : '45px', 'opacity' : '0'}, 500, 'swing');
-    $('.texta2').animate({'top' : '45px', 'opacity' : '0'}, 500, 'swing');
+    $('.texta1').css({'top' : '45px', 'opacity' : '0'});
+    $('.texta2').css({'top' : '45px', 'opacity' : '0'});
   }
-  $($lastId).animate({'opacity' : '0', 'left' : '45px'}, 500, 'swing');
+  $($lastId).css({'opacity' : '0'});
 }
