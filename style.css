@@ -475,7 +475,7 @@ footer .col{
 }
 .contacts .pic4 .box{
   background-image: url('team/Profile4.jpg');
-  background-position: center;
+  background-position: top;
 }
 .contacts .box > .content{
   background: rgba(0, 0, 0, 0.0);
